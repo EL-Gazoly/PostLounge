@@ -1,10 +1,10 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view/>
+  <router-view></router-view>
 </template>
+
+<script>
+
+</script>
 
 <style>
 #app {
@@ -12,19 +12,31 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: #2c3e50; 
+  background-color: #FCFCFC;
+
+  caret-color: transparent;     
 }
 
-nav {
-  padding: 30px;
+a{
+        text-decoration: none;
 }
 
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
+::-webkit-scrollbar {
+    width: 20px;
+  }
+  ::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: #d6dee1;
+    border-radius: 20px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: #d6dee1;
+    border-radius: 20px;
+    border: 6px solid transparent;
+    background-clip: content-box;
+  }
 
-nav a.router-link-exact-active {
-  color: #42b983;
-}
-</style>
+</style> 
