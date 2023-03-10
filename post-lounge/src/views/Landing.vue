@@ -3,9 +3,9 @@
 
   <div class="landing-page-left">
     <div class="landing-page-left-card">
-        <div class="landing-page-left-card-top-side">
+        <a class="landing-page-left-card-top-side" href="/">
              <img src="../assets/hybrowlabs.svg" alt="hybrowlabs" class="logo"/>
-        </div>
+        </a>
         
         <div class="landing-page-left-card-middel-side">
             <myprofileVue profileHandel="Adham ElGazoly" :imageHandel="require('@/assets/mypic.svg')" />
