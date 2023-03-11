@@ -16,18 +16,18 @@
             <div class="post-card-right-side-second-row">
                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit, deleniti quaerat! Dignissimos fugiat sapiente fuga mollitia corporis quod magni similique veritatis totam fugit nemo voluptas beatae libero dolorum enim, neque aliquam soluta at. Tenetur cupiditate obcaecati ipsam sequi eum facilis repellat reprehenderit, assumenda, amet dolores, officiis quasi est vero provident!</p>
             </div>
-            <div class="third-row">
-
-            </div>
 
             <div class="post-card-right-side-third-row">
-                <div class="user-profile-img"></div>
+
+                <div class="user-profile-img">
+                    <img src="../assets/photo-1525134479668-1bee5c7c6845.jpeg" alt="usr pic">
+                </div>
                 <div class="user-profile-info">
                     <div class="usre-profile-name">
-
+                        Adham El-Gazoly
                     </div>
                     <div class="user-profile-job">
-
+                        Senior Cost Accountant at Aufderhar-Cronin
                     </div>
 
                 </div>
@@ -35,10 +35,20 @@
 
             <div class="post-card-right-side-fourth-row">
 
-                <div class="post-info">
-                    <div class="numbr-of-friends"></div>
-                    <div class="number-of-lik"></div>
-                </div>
+                
+                    <div class="numbr-of-friends-container">
+                        <div class="number">
+                            <p>73</p>
+                        </div>
+                        <div class="participants">
+                            Participants
+                        </div>
+                    </div>
+                    <div class="number-of-like">
+                        <img src="../assets/fire.svg" alt="fire icon">
+                        <span>12</span>
+                    </div>
+                
 
             </div>
         </div>
@@ -141,6 +151,158 @@ export default {
 }
 .post-card-right-side-second-row:hover{
     overflow-y: auto;
+}
+.user-profile-img img{
+    width: 39.27px;
+    height: 38px;
+
+    border-radius: 100%;
+
+    margin-right: 9px;
+}
+.post-card-right-side-third-row{
+    width: 100%;
+    height: 50px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.user-profile-info{
+    width: 100%;
+    height: 50px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;    
+
+    text-align: start;
+}
+
+.usre-profile-name{
+
+    height: 18px;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    /* identical to box height */
+
+    display: flex;
+    align-items: center;
+
+    color: #000000;
+}
+
+.user-profile-job{
+    height: 17px;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 16px;
+    /* identical to box height */
+
+    display: flex;
+    align-items: center;
+
+    color: #ADADB5;
+}
+
+.numbr-of-friends-container{
+    width: 111px;
+    height: 30px;
+
+    background: #043097;
+    border-radius: 16px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    
+}
+.number{
+    width: 24px;
+    height: 24px;
+
+    background: #1BF0F2;
+
+    border-radius: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-left: 1px;
+    margin-right: 3px;
+}
+
+.number p{
+    width: 12px;
+    height: 10px;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 10px;
+    line-height: 15px;
+    display: flex;
+    align-items: center;
+
+    color: #033C9B;
+
+}
+.participants{
+    width: 66px;
+    height: 15px;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 16px;
+    display: flex;
+    align-items: center;
+
+    color: #FFFFFF;
+
+}
+.post-card-right-side-fourth-row{
+    width: 86%;
+    height: 50px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.number-of-like{
+    width: 51px;
+    height: 28px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.number-of-like span{
+    width: 17px;
+    height: 22px;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    display: flex;
+    align-items: center;
+
+    color: #000000;
 }
 
 </style>
