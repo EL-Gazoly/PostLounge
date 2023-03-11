@@ -1,7 +1,7 @@
 <template>
     <div class="post-card-container">
         <div class="post-card-left-side">
-            <img src="../assets/photo-1525134479668-1bee5c7c6845.jpeg" alt="usr pic">
+            <img :src="avtar" alt="usr pic">
         </div>
         <div class="post-card-right-side">
             <div class="post-card-right-side-first-row">
@@ -9,25 +9,25 @@
                     <img src="../assets/reactButton.svg" alt="react button">
                 </div>
                 <div class="post-title">
-                    He was an expert but not in a discipline
+                    {{title}}
                 </div>
             </div>
 
             <div class="post-card-right-side-second-row">
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit, deleniti quaerat! Dignissimos fugiat sapiente fuga mollitia corporis quod magni similique veritatis totam fugit nemo voluptas beatae libero dolorum enim, neque aliquam soluta at. Tenetur cupiditate obcaecati ipsam sequi eum facilis repellat reprehenderit, assumenda, amet dolores, officiis quasi est vero provident!</p>
+                <p>{{ body }}</p>
             </div>
 
             <div class="post-card-right-side-third-row">
 
                 <div class="user-profile-img">
-                    <img src="../assets/photo-1525134479668-1bee5c7c6845.jpeg" alt="usr pic">
+                    <img :src="avtar" alt="usr pic">
                 </div>
                 <div class="user-profile-info">
                     <div class="usre-profile-name">
-                        Adham El-Gazoly
+                        {{ firstname }} {{ lastname }}
                     </div>
                     <div class="user-profile-job">
-                        Senior Cost Accountant at Aufderhar-Cronin
+                        {{ job }} at {{ company }}
                     </div>
 
                 </div>
@@ -38,7 +38,7 @@
                 
                     <div class="numbr-of-friends-container">
                         <div class="number">
-                            <p>73</p>
+                            <p>{{ participants }}</p>
                         </div>
                         <div class="participants">
                             Participants
@@ -46,7 +46,7 @@
                     </div>
                     <div class="number-of-like">
                         <img src="../assets/fire.svg" alt="fire icon">
-                        <span>12</span>
+                        <span>{{ reactions }}</span>
                     </div>
                 
 
@@ -58,6 +58,46 @@
 
 <script>
 export default {
+    name: 'PostCard',
+    props: {
+        avtar: {
+            type: String,
+            
+        },
+        title: {
+            type: String,
+            
+        },
+        body: {
+            type: String,
+            
+        
+        },
+        firstname: {
+            type: String,
+            
+        },
+        lastname: {
+            type: String,
+            
+        },
+        job: {
+            type: String,
+            
+        },
+        company: {
+            type: String,
+            
+        },
+        participants :{
+            type: Number,
+        },
+        reactions: {
+            type: Number,
+            
+        },
+
+    },
     
 }
 </script>
@@ -150,7 +190,7 @@ export default {
     display: flex;
     align-items: center;
 
-    color: #D5D5D8;
+    color: #A2A2A6;
 }
 .post-card-right-side-second-row:hover{
     overflow-y: auto;
@@ -308,6 +348,8 @@ export default {
     color: #000000;
 }
 
-
+::-webkit-scrollbar {
+            display: none;
+}   
 
 </style>
