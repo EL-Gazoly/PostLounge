@@ -65,7 +65,7 @@ export default {
 <style>
 
 .post-card-container{
-    width: 125%;
+    width: 100%;
     height: 419px;
     background-color: #fff;
     border-radius: 10px;
@@ -75,6 +75,9 @@ export default {
     flex-direction: row;
     
     align-items: center; 
+
+
+    margin-top: 40px; 
 }
 .post-card-left-side{
     width: 355px;
@@ -304,5 +307,7 @@ export default {
 
     color: #000000;
 }
+
+
 
 </style>

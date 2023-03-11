@@ -29,6 +29,14 @@
 
     <div class="landing-page-middel">
             <postCard />
+            <postCard />
+            <postCard />
+            <postCard />
+            <postCard />
+            <postCard />
+            <postCard />
+            <postCard />
+            
     </div>
 
     <div class="landing-page-right">
@@ -76,13 +84,15 @@ html{
         justify-content: space-between;
         align-items: center;
 
+        
+
         width: 100%;
-        height: 930px;
+        height: 100vh;
     }
 
     .landing-page-left,
     .landing-page-right{
-        height: 924px;
+        height: 100vh;
         width: 305px;
 
         background-color: #F6F9FB;
@@ -95,13 +105,16 @@ html{
 
     .landing-page-middel{
         height: 100vh;
-        width: 658px;
-
-        
+        width: 822.5px;
+        overflow: auto;
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: flex-start;
     } 
+    ::-webkit-scrollbar {
+  display: none;
+}
+    
     .landing-page-left-card{
         width: 175px;
         height: 311px;

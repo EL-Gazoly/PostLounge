@@ -14,6 +14,8 @@
   text-align: center;
   color: #2c3e50; 
   background-color: #FCFCFC;
+  
+  overflow: hidden;
 
   caret-color: transparent;     
 }
