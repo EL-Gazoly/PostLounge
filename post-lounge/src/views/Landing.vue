@@ -28,7 +28,7 @@
     </div>
 
     <div class="landing-page-middel">
-
+            <postCard />
     </div>
 
     <div class="landing-page-right">
@@ -48,12 +48,13 @@
 
 <script>
 import myprofileVue from '@/components/myprofile.vue'
-
+import postCard from '@/components/postCard.vue'
 export default {
     name: 'LandingPage',
 
     components: {
-        myprofileVue
+        myprofileVue,
+        postCard
     },
     data() {
         return {}
