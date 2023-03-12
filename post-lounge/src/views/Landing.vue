@@ -7,82 +7,17 @@
     </div>
     <div v-else class="landing-page-container">
 
-  <div class="landing-page-left">
-    <div class="landing-page-left-card">
-        <a class="landing-page-left-card-top-side" href="/">
-             <img src="../assets/hybrowlabs.svg" alt="hybrowlabs" class="logo"/>
-        </a>
-        
-        <div class="landing-page-left-card-middel-side">
-            <myprofileVue profileHandel="Adham ElGazoly" :imageHandel="require('@/assets/mypic.svg')" />
-        </div>
-
-        <div class="landing-page-left-card-bottom-side">
-            <div class="landing-page-left-card-bottom-side-title">
-                <span>Profiles</span>
-            </div>
-            <div class="landing-page-left-card-bottom-side-content">
-                <myprofileVue profileHandel="Adham El-Gazoly" :imageHandel="require('@/assets/linkedin.svg')"  path='https://www.linkedin.com/in/adham-el-gazoly-075385190'/>
-                <myprofileVue profileHandel="El-Gazoly" :imageHandel="require('@/assets/github.svg')" style="text-align: start;" path="https://github.com/EL-Gazoly" />
-                <myprofileVue profileHandel="Adham El-Gazoly" :imageHandel="require('@/assets/resume.svg')" path="https://app.flowcv.com/resume-feedback/MMVSrPpbLn9GgYiRceIg5"/>
-            </div>
-            
-        </div>
-     
-    </div>
-   
-    </div>
+    <Leftnav />
 
     <div class="landing-page-middel">
         <div v-for='post in posts' :key="post.id" >
            
             <postCard :avtar="post.user.image" :title="post.title" :body="post.body" :firstname="post.user.firstName" :lastname="post.user.lastName" :job="post.user.company.title" :company="post.user.company.name" :reactions="post.reactions" :participants="post.user.age" :postId="post.id" @update-reactions="updateReactions"/>
 
-        </div>
-            
-     
-           
-         
-            
+        </div>        
     </div>
 
-    <div class="landing-page-right">
-        <div class="landing-page-right-card">
-                <div class="conncet">
-                    <div class="connect-title">
-                        Wanna connnect?
-                    </div>
-
-                    <div class="hybrowlabs">
-                        <div class="hybrowlabs-icon">
-                            <img src="../assets/hybrowlabsIcon.svg" alt="hybrowlabs icon">
-                        </div>
-                        <div class="hybrowlabs-name">
-                            Hybrowlabs
-                        </div>
-                    </div>
-                    
-                  
-                </div>
-
-                <div class="friends-list">
-                        <div class="firends-list-title">
-                            Friends
-                        </div>
-                        <div class="firends-list-content" v-for="user in users" :key="user.id">
-                            
-                            <firendProfile :avtar="user.image" :firstname="user.firstName" :lastname="user.lastName" />
-                          
-                            
-
-                        </div>
-                        
-                    </div>
-        </div>
-        
-
-    </div>
-
+    <Rightnav />
 
 
     </div>
@@ -96,18 +31,18 @@
 
 <script>
 import { mapGetters, mapActions } from 'vuex'
-import myprofileVue from '@/components/myprofile.vue'
 import postCard from '@/components/postCard.vue'
-import firendProfile from '@/components/firendProfile.vue'
+import Leftnav from '@/components/Leftnav.vue'
+import Rightnav from '@/components/Rightnav.vue'
 import axios from 'axios'
 
 export default {
     name: 'LandingPage',
 
     components: {
-        myprofileVue,
+        Leftnav,
+        Rightnav,
         postCard,
-        firendProfile
     },
     data() {
         return {  
@@ -120,11 +55,7 @@ export default {
 
     mounted(){
         this.loading = true;
-        axios.get(`https://dummyjson.com/users?limit=10`)
-        .then(res => {
-            this.users = res.data.users;
-            
-        })
+        
         axios.get(`https://dummyjson.com/posts`)
         .then(res => {
             this.posts = res.data.posts;
