@@ -36,7 +36,7 @@
     <div class="landing-page-middel">
         <div v-for='post in posts' :key="post.id" >
            
-            <postCard :avtar="post.user.image" :title="post.title" :body="post.body" :firstname="post.user.firstName" :lastname="post.user.lastName" :job="post.user.company.title" :company="post.user.company.name" :reactions="post.reactions" :participants="post.user.age"/>
+            <postCard :avtar="post.user.image" :title="post.title" :body="post.body" :firstname="post.user.firstName" :lastname="post.user.lastName" :job="post.user.company.title" :company="post.user.company.name" :reactions="post.reactions" :participants="post.user.age" :postId="post.id" @update-reactions="updateReactions"/>
 
         </div>
             
@@ -140,6 +140,23 @@ export default {
 
     },
     methods:{
+        updateReactions(postId, reactions) {
+            this.posts = this.posts.map(post => {
+              if (post.id === postId) {
+                post.reactions = reactions
+                axios.put(`https://dummyjson.com/posts/${postId}`,{
+                reactions: this.reactions + 1
+                })
+              .then(res => {
+                console.log(res)
+              })
+                .catch(err => {
+                    console.log(err)
+                })
+              }
+              return post
+            })
+          },
         mapUserPosts() {
       this.posts.forEach(post => {
         axios.get(`https://dummyjson.com/users/${post.userId}`)

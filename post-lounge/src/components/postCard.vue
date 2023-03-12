@@ -5,8 +5,8 @@
         </div>
         <div class="post-card-right-side">
             <div class="post-card-right-side-first-row">
-                <div class="like-button">
-                    <img src="../assets/reactButton.svg" alt="react button">
+                <div class="like-button" :class="{liked: clicked}">
+                    <img src="../assets/reactButton.svg" alt="react button" @click="updatebutton(postId)">
                 </div>
                 <div class="post-title">
                     {{title}}
@@ -57,7 +57,9 @@
 </template>
 
 <script>
+import axios from 'axios'
 export default {
+    
     name: 'PostCard',
     props: {
         avtar: {
@@ -96,8 +98,32 @@ export default {
             type: Number,
             
         },
+        postId: {
+            type: Number,
+        },
 
     },
+    data(){
+        return{
+            reactions: 0,
+            clicked: false,
+        }
+    },
+    methods: {
+        updatebutton(postId){
+            if (this.clicked ==false){
+                this.reactions = this.reactions + 1
+                this.clicked = true
+            }
+            else{
+                this.reactions = this.reactions - 1
+                this.clicked = false
+            }
+            
+            this.$emit('update-reactions', this.reactions)
+  
+        }
+    }
     
 }
 </script>
@@ -153,6 +179,8 @@ export default {
     width: 75px;
     height: 86px;
     margin-right: 9px ;
+
+    cursor: pointer;
 }
 
 .post-card-right-side-first-row .post-title{
@@ -351,5 +379,9 @@ export default {
 ::-webkit-scrollbar {
             display: none;
 }   
+
+.liked img{
+    transform: rotate(180deg); 
+}
 
 </style>
