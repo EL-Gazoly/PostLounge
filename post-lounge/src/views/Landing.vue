@@ -143,15 +143,17 @@ export default {
         updateReactions(postId, reactions) {
             this.posts = this.posts.map(post => {
               if (post.id === postId) {
+                console.log(reactions)
                 post.reactions = reactions
                 axios.put(`https://dummyjson.com/posts/${postId}`,{
                 reactions: this.reactions + 1
                 })
               .then(res => {
                 console.log('post updated')
+                console.log(res)
               })
                 .catch(err => {
-                    console.log(err)
+                    console.log('error')
                 })
               }
               return post

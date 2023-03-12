@@ -105,7 +105,7 @@ export default {
     },
     data(){
         return{
-            reactions: 0,
+            reactions: this.reactions,
             clicked: false,
         }
     },
@@ -116,7 +116,7 @@ export default {
                 this.clicked = true
             }
             else{
-                this.reactions = this.reactions - 1
+                this.reactions = this.reactions
                 this.clicked = false
             }
             
