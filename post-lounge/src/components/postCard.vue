@@ -16,22 +16,23 @@
             <div class="post-card-right-side-second-row">
                 <p>{{ body }}</p>
             </div>
+            <router-link :to="{ path: '/user/' + userId}"> 
+                <div class="post-card-right-side-third-row">
 
-            <div class="post-card-right-side-third-row">
-
-                <div class="user-profile-img">
-                    <img :src="avtar" alt="usr pic">
-                </div>
-                <div class="user-profile-info">
-                    <div class="usre-profile-name">
-                        {{ firstname }} {{ lastname }}
+                    <div class="user-profile-img">
+                        <img :src="avtar" alt="usr pic">
                     </div>
-                    <div class="user-profile-job">
-                        {{ job }} at {{ company }}
-                    </div>
+                    <div class="user-profile-info">
+                        <div class="usre-profile-name">
+                            {{ firstname }} {{ lastname }}
+                        </div>
+                        <div class="user-profile-job">
+                            {{ job }} at {{ company }}
+                        </div>
 
+                    </div>
                 </div>
-            </div>
+            </router-link>
 
             <div class="post-card-right-side-fourth-row">
 
@@ -101,6 +102,9 @@ export default {
         postId: {
             type: Number,
         },
+        userId: {
+            type: Number,
+        }
 
     },
     data(){
@@ -119,9 +123,6 @@ export default {
                 this.reactions = this.reactions
                 this.clicked = false
             }
-            
-            this.$emit('update-reactions', this.reactions)
-  
         }
     }
     

@@ -8,6 +8,9 @@ const routes = [
     component: () => import('../views/Landing.vue')
   },
   {
+    path: `/user/:id`,
+    name: 'UserProfile',
+    component: () => import('../views/UserProfile.vue')
    
   }
 ]

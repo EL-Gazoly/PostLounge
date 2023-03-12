@@ -1,8 +1,30 @@
 <template>
-  <router-view></router-view>
+  <div id="app">
+    <router-view />
+  </div>
 </template>
 
 <script>
+import Landing from './views/Landing.vue';
+import UserProfile from './views/UserProfile.vue';
+
+export default {
+  name: 'App',
+  components: {
+    Landing,
+    UserProfile,
+  },
+
+  beforeRouteEnter(to, from, next) {
+    next(vm => {
+      location.reload();
+    });
+  },
+
+  beforeRouteUpdate(to, from, next) {
+    location.reload();
+  },
+};
 
 </script>
 
@@ -23,6 +45,42 @@
 a{
         text-decoration: none;
 }
+
+.spinner {
+        display: inline-block;
+        position: relative;
+        width: 64px;
+        height: 64px;
+    }
+
+    .spinner .dot1,
+    .spinner .dot2 {
+        position: absolute;
+        top: 0;
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        background-color: #333;
+        animation: sk-bounce 2s infinite ease-in-out;
+    }
+
+    .spinner .dot2 {
+        top: auto;
+        bottom: 0;
+        animation-delay: -1s;
+    }
+
+    @keyframes sk-bounce {
+        0% {
+            transform: scale(0);
+        }
+        50% {
+            transform: scale(1);
+        }
+        100% {
+            transform: scale(0);
+        }
+    }
 
 ::-webkit-scrollbar {
     width: 20px;
