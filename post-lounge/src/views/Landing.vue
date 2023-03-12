@@ -95,6 +95,7 @@
 </template>
 
 <script>
+import { mapGetters, mapActions } from 'vuex'
 import myprofileVue from '@/components/myprofile.vue'
 import postCard from '@/components/postCard.vue'
 import firendProfile from '@/components/firendProfile.vue'
@@ -113,21 +114,20 @@ export default {
             posts: [],
             users: [],
             loading: false,
+
         }
     },
 
     mounted(){
         this.loading = true;
-        axios.get(`https://dummyjson.com/users?skip=5&limit=10`)
+        axios.get(`https://dummyjson.com/users?limit=10`)
         .then(res => {
             this.users = res.data.users;
-            console.log(this.users);
             
         })
         axios.get(`https://dummyjson.com/posts`)
         .then(res => {
             this.posts = res.data.posts;
-            console.log(this.posts);
             this.mapUserPosts();
             this.loading = false;
 
@@ -148,7 +148,7 @@ export default {
                 reactions: this.reactions + 1
                 })
               .then(res => {
-                console.log(res)
+                console.log('post updated')
               })
                 .catch(err => {
                     console.log(err)
@@ -168,6 +168,7 @@ export default {
           })
       })
     },
+
     }
 
 
