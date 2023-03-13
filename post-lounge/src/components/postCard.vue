@@ -424,7 +424,7 @@ export default {
 }
 
 @media (min-width: 950px) and (max-width : 1275px){
-        .post-card-container{
+    .post-card-container{
         width: 75%;
         margin-left: 13.5%;
     }
@@ -758,7 +758,6 @@ export default {
     }
 }
 
-
 @media (min-width: 401px) and (max-width: 549px){
     .post-card-container{
         width: 322px;
@@ -891,8 +890,6 @@ export default {
     }
     
 }
-
-
 
 @media (max-width: 400px){
     .post-card-container{
