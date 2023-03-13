@@ -54,11 +54,47 @@ export default {
     align-items: center;
 
 }
-@media (min-width: 550px) {
+@media (min-width: 949px) {
     .header-contanier{
      display: none;
     }
     
+}
+
+@media (min-width: 843px) and (max-width : 949px){
+    .header-contanier{
+        width: 814px;
+    }
+    .header-left{
+        width: 98px;
+    }
+
+}
+@media (min-width: 661px) and (max-width : 842px){
+    .header-contanier{
+        width: 631px;
+    }
+    .header-left{
+        width: 98px;
+    }
+}
+
+@media (min-width: 550px) and (max-width : 660px){
+    .header-contanier{
+        width: 514px;
+    }
+    .header-left{
+        width: 98px;
+    }
+}
+
+@media (min-width: 401px) and (max-width: 549px){
+    .header-contanier{
+        width: 382px;
+    }
+    .header-left{
+        width: 98px;
+    }
 }
 
 </style>

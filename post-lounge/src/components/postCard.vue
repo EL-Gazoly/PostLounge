@@ -424,77 +424,7 @@ export default {
 }
 
 @media (min-width: 950px) and (max-width : 1275px){
-    .post-card-container{
-        width: 75%;
-        margin-left: 13.5%;
-    }
-    .post-card-left-side{
-        width: 122px;
-    
-    }
-    .post-card-left-side img{
-        width: 154px;
-    }
-    .post-card-right-side{
-        width: 276px;
-    }
-    .post-card-right-side-first-row img {
-        width: 51px;
-    }
-    .post-card-right-side-first-row .post-title {
-        font-size: 15px;
-    } 
-    .landing-page-left,
-    .landing-page-right{
-        width: 245px;
-    }
-    .post-card-right-side-second-row {
-        width: 78%;
-    }
-    
-    .post-card-right-side-second-row p {
-        width: 122%;
-        font-size: 11px;
-
-    }
-    .landing-page-right-card {
-        width: 167px;
-    }
-    .user-profile-info {
-        width: 79%;
-    }
-    .usre-profile-name{
-        font-size: 10px;
-    }
-    .user-profile-job {
-        font-size: 8px;
-    }
-
-    .post-card-right-side-fourth-row{
-        width: 87%;
-    }
-
-    .numbr-of-friends-container {
-        width: 93px;
-        border-radius: 11px;
-    }
-    .number {
-        width: 23px;
-    }
-    .number p {
-        font-size: 10px;
-    }
-    .participants {
-        font-size: 10px;
-    }
-    .profile-container span {
-        width: 116px;
-    }
-
-}
-
-@media (min-width: 550px) and (max-width : 949px){
-    .post-card-container{
+        .post-card-container{
         width: 75%;
         margin-left: 13.5%;
     }
@@ -561,6 +491,538 @@ export default {
     .profile-container span {
         width: 116px;
     }
+
+}
+@media (min-width: 761px) and (max-width : 949px){
+    .post-card-container{
+        width: 428px;
+        height: 184.13px;
+        margin-left: 21%;
+        
+    }
+    .post-card-left-side{
+        width: 142.88px;
+        height: 166.1px;
+    
+    }
+    .post-card-left-side img{
+        width: 117.88px;
+        height: 166.1px;
+        
+    }
+    .post-card-right-side{
+        width: 259.59px;
+        height: 155px;
+    
+    }
+    .post-card-right-side-first-row img {
+        width: 40.55px;
+        height: 39px;
+
+        margin-right: 1px;
+    }
+    .post-card-right-side-first-row .post-title {
+        width: 198.06px;
+        height: 35.37px;
+        
+        font-size: 12px;
+        line-height: 13px;
+
+    } 
+    .landing-page-left,
+    .landing-page-right{
+        display: none;
+        width: 245px;
+    }
+    .post-card-right-side-second-row {
+        width: 260px;
+        height: 38px;
+
+        overflow: auto;
+        
+    }
+    
+    .post-card-right-side-second-row p {
+        width: 247.55px;
+        height: 34.48px;
+
+        font-size: 7px;
+        line-height: 7px;
+
+    }
+    .landing-page-right-card {
+        width: 139.82px;
+       
+
+    }
+    .user-profile-info {
+        width: 126.31px;
+        height: 22.84px;
+      
+    }
+    .usre-profile-name{
+        width: 109.21px;
+        height: 11px;
+        
+        line-height: 15px;
+        font-size: 8px;
+    }
+    .user-profile-job {
+        width: 162.31px;
+        height: 9.91px;
+        line-height: 8px;
+        font-size: 6px;
+    }
+
+    .post-card-right-side-fourth-row{
+        width: 87%;
+    }
+
+    .numbr-of-friends-container {
+        width: 67.87px;
+        height: 18px;
+        border-radius: 11px;
+    }
+    .number {
+        width: 14.3px;
+        height: 13.91px;
+        
+    }
+    .number p {
+        width: 6.9px;
+        height: 9px;
+        font-size: 6px;
+        line-height: 6px;
+    }
+    .participants {
+        width: 36.7px;
+        height: 8px;
+        font-size: 7px;
+        line-height: 9px;
+    }
+    .profile-container span {
+        width: 116px;
+    }
+    .user-profile-img img {
+        width: 32px;
+        height: 22px;
+    }
+    .number-of-like {
+        width: 19.94px;
+        height: 11.89px;
+    }
+    .number-of-like img {
+        width: 21.25px;
+        height: 11.89px;
+    }
+
+    .number-of-like span{
+        width: 8.94px;
+        height: 11.89px;
+
+        font-size: 10px;
+        line-height: 12px;
+    }
+}
+
+@media (min-width: 550px) and (max-width : 760px){
+    
+    .post-card-container{
+        width: 428px;
+        height: 184.13px;
+        margin-left: 13%;
+        
+    }
+    .post-card-left-side{
+        width: 142.88px;
+        height: 166.1px;
+    
+    }
+    .post-card-left-side img{
+        width: 117.88px;
+        height: 166.1px;
+        
+    }
+    .post-card-right-side{
+        width: 259.59px;
+        height: 155px;
+    
+    }
+    .post-card-right-side-first-row img {
+        width: 40.55px;
+        height: 39px;
+
+        margin-right: 1px;
+    }
+    .post-card-right-side-first-row .post-title {
+        width: 198.06px;
+        height: 35.37px;
+        
+        font-size: 12px;
+        line-height: 13px;
+
+    } 
+    .landing-page-left,
+    .landing-page-right{
+        display: none;
+        width: 245px;
+    }
+    .post-card-right-side-second-row {
+        width: 260px;
+        height: 38px;
+
+        overflow: auto;
+        
+    }
+    
+    .post-card-right-side-second-row p {
+        width: 247.55px;
+        height: 34.48px;
+
+        font-size: 7px;
+        line-height: 7px;
+
+    }
+    .landing-page-right-card {
+        width: 139.82px;
+       
+
+    }
+    .user-profile-info {
+        width: 126.31px;
+        height: 22.84px;
+      
+    }
+    .usre-profile-name{
+        width: 109.21px;
+        height: 11px;
+        
+        line-height: 15px;
+        font-size: 8px;
+    }
+    .user-profile-job {
+        width: 162.31px;
+        height: 9.91px;
+        line-height: 8px;
+        font-size: 6px;
+    }
+
+    .post-card-right-side-fourth-row{
+        width: 87%;
+    }
+
+    .numbr-of-friends-container {
+        width: 67.87px;
+        height: 18px;
+        border-radius: 11px;
+    }
+    .number {
+        width: 14.3px;
+        height: 13.91px;
+        
+    }
+    .number p {
+        width: 6.9px;
+        height: 9px;
+        font-size: 6px;
+        line-height: 6px;
+    }
+    .participants {
+        width: 36.7px;
+        height: 8px;
+        font-size: 7px;
+        line-height: 9px;
+    }
+    .profile-container span {
+        width: 116px;
+    }
+    .user-profile-img img {
+        width: 32px;
+        height: 22px;
+    }
+    .number-of-like {
+        width: 19.94px;
+        height: 11.89px;
+    }
+    .number-of-like img {
+        width: 21.25px;
+        height: 11.89px;
+    }
+
+    .number-of-like span{
+        width: 8.94px;
+        height: 11.89px;
+
+        font-size: 10px;
+        line-height: 12px;
+    }
+}
+
+
+@media (min-width: 401px) and (max-width: 549px){
+    .post-card-container{
+        width: 322px;
+        height: 184.13px;
+        margin-left: 16%;
+        
+    }
+    .post-card-left-side{
+        width: 105.88px;
+        height: 166.1px;
+    
+    }
+    .post-card-left-side img{
+        width: 117.88px;
+        height: 166.1px;
+        
+    }
+    .post-card-right-side{
+        width: 190.59px;
+        height: 155px;
+    
+    }
+    .post-card-right-side-first-row img {
+        width: 40.55px;
+        height: 39px;
+
+        margin-right: 1px;
+    }
+    .post-card-right-side-first-row .post-title {
+        width: 111.06px;
+        height: 35.37px;
+
+        font-size: 9px;
+        line-height: 10px;
+
+    } 
+    .landing-page-left,
+    .landing-page-right{
+        display: none;
+        width: 245px;
+    }
+    .post-card-right-side-second-row {
+        width: 197px;
+        height: 38px;
+
+        overflow: auto;
+        
+    }
+    
+    .post-card-right-side-second-row p {
+        width: 181.55px;
+        height: 34.48px;
+
+        font-size: 7px;
+        line-height: 7px;
+
+    }
+    .landing-page-right-card {
+        width: 139.82px;
+       
+
+    }
+    .user-profile-info {
+        width: 126.31px;
+        height: 22.84px;
+      
+    }
+    .usre-profile-name{
+        width: 109.21px;
+        height: 11px;
+        
+        line-height: 15px;
+        font-size: 8px;
+    }
+    .user-profile-job {
+        width: 162.31px;
+        height: 9.91px;
+        line-height: 8px;
+        font-size: 6px;
+    }
+
+    .post-card-right-side-fourth-row{
+        width: 87%;
+    }
+
+    .numbr-of-friends-container {
+        width: 67.87px;
+        height: 18px;
+        border-radius: 11px;
+    }
+    .number {
+        width: 14.3px;
+        height: 13.91px;
+        
+    }
+    .number p {
+        width: 6.9px;
+        height: 9px;
+        font-size: 6px;
+        line-height: 6px;
+    }
+    .participants {
+        width: 36.7px;
+        height: 8px;
+        font-size: 7px;
+        line-height: 9px;
+    }
+    .profile-container span {
+        width: 116px;
+    }
+    .user-profile-img img {
+        width: 32px;
+        height: 22px;
+    }
+    .number-of-like {
+        width: 19.94px;
+        height: 11.89px;
+    }
+    .number-of-like img {
+        width: 21.25px;
+        height: 11.89px;
+    }
+
+    .number-of-like span{
+        width: 8.94px;
+        height: 11.89px;
+
+        font-size: 10px;
+        line-height: 12px;
+    }
+    
+}
+
+
+
+@media (max-width: 400px){
+    .post-card-container{
+        width: 261px;
+        height: 191.13px; 
+        
+        margin-left: 13%;
+        
+    }
+    .post-card-left-side{
+        width: 84.88px;
+        height: 166.1px;
+    
+    }
+    .post-card-left-side img{
+        width: 84.88px;
+        height: 166.1px;
+        
+    }
+    .post-card-right-side{
+        width: 145.59px;
+        height: 155px;
+    
+    }
+    .post-card-right-side-first-row img {
+        width: 28.55px;
+        height: 33px;
+    }
+    .post-card-right-side-first-row .post-title {
+        width: 111.06px;
+        height: 35.37px;
+
+        font-size: 9px;
+
+    } 
+    .landing-page-left,
+    .landing-page-right{
+        display: none;
+        width: 245px;
+    }
+    .post-card-right-side-second-row {
+        width: 154px;
+        height: 38px;
+
+        overflow: auto;
+        
+    }
+    
+    .post-card-right-side-second-row p {
+        width: 124.55px;
+        height: 20.48px;
+        
+
+        font-size: 6px;
+        line-height: 7px;
+
+    }
+    .landing-page-right-card {
+        width: 139.82px;
+       
+
+    }
+    .user-profile-info {
+        width: 126.31px;
+        height: 22.84px;
+      
+    }
+    .usre-profile-name{
+        width: 109.21px;
+        height: 11px;
+        line-height: 10px;
+        font-size: 7px;
+    }
+    .user-profile-job {
+        width: 133.31px;
+        height: 9.91px;
+        line-height: 8px;
+        font-size: 5px;
+    }
+
+    .post-card-right-side-fourth-row{
+        width: 87%;
+    }
+
+    .numbr-of-friends-container {
+        width: 52.87px;
+        height: 15px;
+        border-radius: 11px;
+    }
+    .number {
+        width: 12.3px;
+        height: 12.41px;
+        
+    }
+    .number p {
+        width: 4.9px;
+        height: 5px;
+        font-size: 4px;
+        line-height: 6px;
+    }
+    .participants {
+        width: 36.7px;
+        height: 8px;
+        font-size: 6px;
+        line-height: 9px;
+    }
+    .profile-container span {
+        width: 116px;
+    }
+    .user-profile-img img {
+        width: 15px;
+        height: 19px;
+    }
+    .number-of-like {
+        width: 19.94px;
+        height: 11.89px;
+    }
+    .number-of-like img {
+        width: 8.25px;
+        height: 11.89px;
+    }
+
+    .number-of-like span{
+        width: 8.94px;
+        height: 11.89px;
+
+        font-size: 8px;
+        line-height: 12px;
+    }
+
 
 }
 </style>
