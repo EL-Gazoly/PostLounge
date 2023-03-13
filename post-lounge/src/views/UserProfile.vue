@@ -44,7 +44,7 @@
             
         <div v-for='post in posts' :key="post.id" >
            
-            <postCard 
+            <postCard :class="{ 'post-card': true, 'post-card-one-post': posts.length === 1}"
             :avtar="user.image" 
             :title="post.title" 
             :body="post.body" 
@@ -274,5 +274,9 @@ watch:{
     font-weight: 600;
     color: #000;
 
+}
+.post-card-one-post{
+    margin-bottom: 44px;
+    margin-bottom: 172px;
 }
 </style>
