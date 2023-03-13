@@ -1,5 +1,5 @@
 <template>
-    <div class="landing-page-right">
+    <div class="landing-page-right" :class="{ 'landing-page-right-open': !isOpen }">
         <div class="landing-page-right-card">
                 <div class="conncet">
                     <div class="connect-title">
@@ -46,6 +46,12 @@ export default {
     name: 'Rightnav',
     components: {
         firendProfile
+    },
+    props: {
+    isOpen: {
+        type: Boolean,
+        default: false,
+    }
     },
     data(){
         return {
@@ -163,11 +169,20 @@ export default {
         color: #333340;
     }
 
-  @media (min-width: 550px) and (max-width : 949px){
+    @media (min-width: 250px) and (max-width : 949px){
 
-    
-    .landing-page-right{
+    .landing-page-right-open {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        cursor: pointer;
+        z-index: 999;
+
         display: none;
     }
-  }
+   
+}
+
+
+  
 </style>

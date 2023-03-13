@@ -1,5 +1,5 @@
 <template>
-        <div class="landing-page-left">
+        <div class="landing-page-left" :class="{ 'landing-page-left-open': !isOpen }"> 
     <div class="landing-page-left-card">
         <a class="landing-page-left-card-top-side" href="/">
              <img src="../assets/hybrowlabs.svg" alt="hybrowlabs" class="logo"/>
@@ -30,6 +30,12 @@
 import myprofileVue from '@/components/myprofile.vue'
 export default {
     name: 'Leftnav',
+    props: {
+    isOpen: {
+        type: Boolean,
+        default: false,
+    }
+    },
     components: {
         myprofileVue
     }
@@ -94,12 +100,17 @@ export default {
         flex-direction: column;
         justify-content: space-between;
     }
+    @media (min-width: 250px) and (max-width : 949px){
 
-    @media (min-width: 550px) and (max-width : 949px){
+    .landing-page-left-open {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        cursor: pointer;
+        z-index: 999;
 
-    
-    .landing-page-left{
         display: none;
     }
+   
 }
 </style>

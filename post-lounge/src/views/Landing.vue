@@ -5,9 +5,12 @@
         <div class="dot2"></div>
       </div>
     </div>
-    <div v-else class="landing-page-container">
-
-    <Leftnav />
+    <div  v-else >
+    <Header @toggle-left-nav="toggleLeftNav" @toggle-right-nav="toggleRightNav"/>
+    
+    <div class="landing-page-container">
+   
+    <Leftnav :is-open="isLeftNavOpen" />
 
     <div class="landing-page-middel">
         <div v-for='post in posts' :key="post.id" >
@@ -28,10 +31,11 @@
         </div>        
     </div>
 
-    <Rightnav />
+    <Rightnav :is-open="isRightNavOpen"/>
 
 
     </div>
+</div>
   
 
 
@@ -45,6 +49,7 @@ import { mapGetters, mapActions } from 'vuex'
 import postCard from '@/components/postCard.vue'
 import Leftnav from '@/components/Leftnav.vue'
 import Rightnav from '@/components/Rightnav.vue'
+import Header from '@/components/header.vue'
 import axios from 'axios'
 
 export default {
@@ -54,12 +59,15 @@ export default {
         Leftnav,
         Rightnav,
         postCard,
+        Header,
     },
     data() {
         return {  
             posts: [],
             users: [],
             loading: false,
+            isLeftNavOpen: false,   
+            isRightNavOpen: false,
 
         }
     },
@@ -94,6 +102,14 @@ export default {
       })
     },
 
+    toggleLeftNav(){
+        console.log('toggleLeftNav');
+        this.isLeftNavOpen = !this.isLeftNavOpen;
+    },
+    toggleRightNav(){
+        console.log('toggleLeftNav');
+        this.isRightNavOpen = !this.isRightNavOpen ;
+    },
     }
 
 
@@ -127,6 +143,5 @@ html{
         flex-direction: column;
         justify-content: flex-start;
     } 
-
 
 </style>
