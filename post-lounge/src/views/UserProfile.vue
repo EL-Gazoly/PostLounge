@@ -122,7 +122,14 @@ export default {
   
 }, 
 
-
+watch:{
+    $route(to, from) {
+        // Reload the page when moving between user routes
+        if (to.path !== from.path) {
+            location.reload();
+        }
+    }
+}
 
 
 }
