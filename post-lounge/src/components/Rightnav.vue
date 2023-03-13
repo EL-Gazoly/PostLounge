@@ -3,17 +3,17 @@
         <div class="landing-page-right-card">
                 <div class="conncet">
                     <div class="connect-title">
-                        Wanna connnect?
+                        Get in touch?
                     </div>
 
-                    <div class="hybrowlabs">
+                    <a href="https://hybrowlabs.com/contact" target="blank" class="hybrowlabs">
                         <div class="hybrowlabs-icon">
                             <img src="../assets/hybrowlabsIcon.svg" alt="hybrowlabs icon">
                         </div>
                         <div class="hybrowlabs-name">
                             Hybrowlabs
                         </div>
-                    </div>
+                    </a>
                     
                   
                 </div>
