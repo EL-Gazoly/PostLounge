@@ -58,7 +58,6 @@
 </template>
 
 <script>
-import axios from 'axios'
 export default {
     
     name: 'PostCard',
@@ -385,4 +384,183 @@ export default {
     transform: rotate(180deg); 
 }
 
+@media (min-width: 1432px) and (max-width: 1610px){
+    .post-card-container{
+        width: 89%;
+        margin-left : 5.5%;
+    }
+    .post-card-left-side{
+        width:  270px;
+    
+    }
+    .post-card-left-side img{
+        width: 282px;
+    }
+
+}
+@media (min-width: 1276px) and (max-width : 1431px){
+    .post-card-container{
+        width: 85%;
+        margin-left: 7.5%;
+    }
+    .post-card-left-side{
+        width:  215px;
+    
+    }
+    .post-card-left-side img{
+        width: 258px;
+    }
+
+    .landing-page-left,
+    .landing-page-right{
+        width: 245px;
+    }
+    .post-card-right-side-second-row {
+        width: 89%;
+    }
+    .landing-page-right-card {
+        width: 167px;
+    }
+}
+
+@media (min-width: 950px) and (max-width : 1275px){
+    .post-card-container{
+        width: 75%;
+        margin-left: 13.5%;
+    }
+    .post-card-left-side{
+        width: 122px;
+    
+    }
+    .post-card-left-side img{
+        width: 154px;
+    }
+    .post-card-right-side{
+        width: 276px;
+    }
+    .post-card-right-side-first-row img {
+        width: 51px;
+    }
+    .post-card-right-side-first-row .post-title {
+        font-size: 15px;
+    } 
+    .landing-page-left,
+    .landing-page-right{
+        width: 245px;
+    }
+    .post-card-right-side-second-row {
+        width: 78%;
+    }
+    
+    .post-card-right-side-second-row p {
+        width: 122%;
+        font-size: 11px;
+
+    }
+    .landing-page-right-card {
+        width: 167px;
+    }
+    .user-profile-info {
+        width: 79%;
+    }
+    .usre-profile-name{
+        font-size: 10px;
+    }
+    .user-profile-job {
+        font-size: 8px;
+    }
+
+    .post-card-right-side-fourth-row{
+        width: 87%;
+    }
+
+    .numbr-of-friends-container {
+        width: 93px;
+        border-radius: 11px;
+    }
+    .number {
+        width: 23px;
+    }
+    .number p {
+        font-size: 10px;
+    }
+    .participants {
+        font-size: 10px;
+    }
+    .profile-container span {
+        width: 116px;
+    }
+
+}
+
+@media (min-width: 550px) and (max-width : 949px){
+    .post-card-container{
+        width: 75%;
+        margin-left: 13.5%;
+    }
+    .post-card-left-side{
+        width: 122px;
+    
+    }
+    .post-card-left-side img{
+        width: 154px;
+    }
+    .post-card-right-side{
+        width: 276px;
+    }
+    .post-card-right-side-first-row img {
+        width: 51px;
+    }
+    .post-card-right-side-first-row .post-title {
+        font-size: 15px;
+    } 
+    .landing-page-left,
+    .landing-page-right{
+        display: none;
+        width: 245px;
+    }
+    .post-card-right-side-second-row {
+        width: 78%;
+    }
+    
+    .post-card-right-side-second-row p {
+        width: 122%;
+        font-size: 11px;
+
+    }
+    .landing-page-right-card {
+        width: 167px;
+    }
+    .user-profile-info {
+        width: 79%;
+    }
+    .usre-profile-name{
+        font-size: 10px;
+    }
+    .user-profile-job {
+        font-size: 8px;
+    }
+
+    .post-card-right-side-fourth-row{
+        width: 87%;
+    }
+
+    .numbr-of-friends-container {
+        width: 93px;
+        border-radius: 11px;
+    }
+    .number {
+        width: 23px;
+    }
+    .number p {
+        font-size: 10px;
+    }
+    .participants {
+        font-size: 10px;
+    }
+    .profile-container span {
+        width: 116px;
+    }
+
+}
 </style>

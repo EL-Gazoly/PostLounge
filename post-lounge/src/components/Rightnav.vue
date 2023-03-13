@@ -70,6 +70,8 @@ export default {
   },        
     
 }
+
+
 </script>
 
 <style>
@@ -161,4 +163,11 @@ export default {
         color: #333340;
     }
 
+  @media (min-width: 550px) and (max-width : 949px){
+
+    
+    .landing-page-right{
+        display: none;
+    }
+  }
 </style>

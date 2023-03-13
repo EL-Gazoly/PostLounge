@@ -94,4 +94,12 @@ export default {
         flex-direction: column;
         justify-content: space-between;
     }
+
+    @media (min-width: 550px) and (max-width : 949px){
+
+    
+    .landing-page-left{
+        display: none;
+    }
+}
 </style>
