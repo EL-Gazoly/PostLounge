@@ -103,11 +103,9 @@ export default {
     },
 
     toggleLeftNav(){
-        console.log('toggleLeftNav');
         this.isLeftNavOpen = !this.isLeftNavOpen;
     },
     toggleRightNav(){
-        console.log('toggleLeftNav');
         this.isRightNavOpen = !this.isRightNavOpen ;
     },
     }
