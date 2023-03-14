@@ -106,7 +106,6 @@ export default {
       isLeftNavOpen() {
         return this.$store.state.isLeftNavOpen;
       }
-
     },
   
     methods: {
@@ -297,7 +296,7 @@ export default {
         font-size: 33px;
     }
     .userProfil-card-profile-name h2{
-        width: 129%;
+        width: 141%;
     }
 
 }
@@ -349,7 +348,7 @@ export default {
         font-size: 8px;
     }
     .userProfil-card-profile-image{
-        width: 138.95px;
+        width: 103.95px;
         height: 53px;
         position: relative;
         top: 12%;
@@ -410,7 +409,7 @@ export default {
     }
 
     .userProfil-card-profile-name h2{
-        width: 127%;
+        width: 135%;
         font-size: 8px;
     }
     .userProfil-card-profile-image{
@@ -420,7 +419,7 @@ export default {
         left: 21%;
     }
     .userProfil-card-profile-image img{
-        height: 110px;
+        height: 107px;
     }
 }
 @media (min-width: 401px) and (max-width: 549px){
@@ -446,13 +445,13 @@ export default {
         font-size: 7px;
     }
     .userProfil-card-profile-image{
-        width: 116.95px;
+        width: 96.95px;
         height: 53px;
-        top: 8.5%;
-        left: 22%;
+        top: 10.5%;
+        left: 23%;
     }
     .userProfil-card-profile-image img{
-        height: 110px;
+        height: 99px;
     }
 }
 @media (max-width: 400px){
@@ -475,7 +474,7 @@ export default {
 
     .userProfil-card-profile-name h2{
         width: 158%;
-        font-size: 6px;
+        font-size: 5px;
     }
     .userProfil-card-profile-image{
         width: 86.95px;
@@ -490,12 +489,22 @@ export default {
 
 }
 
-@media (max-height: 710px) and (min-height: 440px){
+
+@media (max-height: 706px) and (min-height: 472px){
     .userProfil-card-profile-image{
         width: 86.95px;
         height: 52px;
-        top: 6%;
-        left: 25%;
+        top: 17%;
+        left: 13%;
+ 
+    }
+}
+@media (max-height: 471px){
+    .userProfil-card-profile-image{
+        width: 86.95px;
+        height: 52px;
+        top: 17%;
+        left: 13%;
 
     }
 }
