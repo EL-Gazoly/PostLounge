@@ -40,7 +40,7 @@
                     </div> 
                     <div v-if = 'posts.length === 0' class="no-posts">
                         <span >
-                        We are sorry, but {{ gender }} {{ user.lastName }} has no posts yet.
+                        We are sorry, but {{ user.gender === 'male' ? 'MR.' : 'MRS.' }} {{ user.lastName }} has no posts yet.
                     </span>
                     </div>
                     
@@ -68,91 +68,64 @@
 </template>
 
 <script>
-import postCard from '@/components/postCard.vue'
-import Leftnav from '@/components/Leftnav.vue'
-import Rightnav from '@/components/Rightnav.vue'
-import Header from '@/components/header.vue'
-import axios from 'axios'
+import { mapGetters, mapActions } from "vuex";
+import postCard from "@/components/postCard.vue";
+import Leftnav from "@/components/Leftnav.vue";
+import Rightnav from "@/components/Rightnav.vue";
+import Header from "@/components/header.vue";
+
 export default {
-    name: 'UserProfile',
-
-    data() {
-        return {
-            posts: [],
-            user: [],
-            companyName : '',
-            jobTitle : '',
-            loading: false,
-            gender: '',
-            isLeftNavOpen: false,   
-            isRightNavOpen: false,
-        }
-    },
-    
-    components: {
-        Leftnav,
-        Rightnav,
-        postCard,
-        Header,
-    },
-      beforeRouteUpdate(to, from, next) {
-        // Reload the page when moving between user routes
-        if (to.path !== from.path) {
-            next(() => {
-                location.reload();
-            })
-        
-        } else {
-            next();
-        }
-    },
-
-    mounted() {
-        this.loading = true;
-        const userId = this.$route.params.id;
-
-        // Fetch both posts and users data from API endpoint
-        axios.all([
-            axios.get('https://dummyjson.com/posts'),
-            axios.get(`https://dummyjson.com/users/${userId}`)  ,
-        ]).then(axios.spread((postsRes, userRes) => {
-            // Set posts and users data
-            this.posts = postsRes.data.posts.filter(post => post.userId == userId);
-            this.user = userRes.data;
-            this.companyName = this.user.company.name;
-            this.jobTitle = this.user.company.title;
-            this.gender = this.user.gender === 'male' ? 'MR' : 'MRS';
-            
-            this.loading = false;
-        }));
-
-  
-}, 
-methods : {
-    toggleLeftNav(){
-        console.log('toggleLeftNav');
-        this.isLeftNavOpen = !this.isLeftNavOpen;
-    },
-    toggleRightNav(){
-        console.log('toggleLeftNav');
-        this.isRightNavOpen = !this.isRightNavOpen ;
-    },
-},
-
-watch:{
-    $route(to, from) {
-        // Reload the page when moving between user routes
-        if (to.path !== from.path) {
-            location.reload();
-        }
+  name: "UserProfile",
+  components: {
+    Leftnav,
+    Rightnav,
+    postCard,
+    Header,
+  },
+  data() {
+    return {
+      isLeftNavOpen: false,
+      isRightNavOpen: false,
     }
-}
+  },
+  computed: {
+      ...mapGetters(["getUserById"]),
+     posts () {
+        return this.$store.getters.getUserById;
+      },
+      user() {
+        return this.$store.state.users
+      },
+      loading() {
+        return this.$store.state.loading;
 
+      },
+      companyName() {
+        return this.$store.state.companyName;
+      },
+      jobTitle(){
+        return this.$store.state.jobTitle
+      },
 
-}
-
-
+    },
+  
+    methods: {
+      ...mapActions(["fetchPosts", "fetchUser"]),
+    },
+  
+    mounted() {
+      this.fetchPosts(Number(this.$route.params.id));
+      this.fetchUser(this.$route.params.id);
+    },
+    watch: {
+      $route(to, from) {
+        location.reload();
+      },
+    }
+};
 </script>
+
+
 
 <style>
 
@@ -231,7 +204,7 @@ watch:{
 }
 
 .userProfil-card-profile-name h2{
-    width: 117%;
+    width: 135%;
     height: 20px;
 
     font-family: 'Poppins';
