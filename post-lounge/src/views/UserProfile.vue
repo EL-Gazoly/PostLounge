@@ -94,7 +94,7 @@ export default {
         return this.$store.getters.getUserById;
       },
       user() {
-        return this.$store.state.users
+        return this.$store.state.user
       },
       loading() {
         return this.$store.state.loading;

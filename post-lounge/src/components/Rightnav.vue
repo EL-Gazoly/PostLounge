@@ -41,7 +41,8 @@
 
 <script>
 import firendProfile from '@/components/firendProfile.vue'
-import axios from 'axios'
+import { mapActions } from "vuex";
+
 export default {
     name: 'Rightnav',
     components: {
@@ -53,27 +54,17 @@ export default {
         default: false,
     }
     },
-    data(){
-        return {
-            users: []
+   computed: {
+    users () {
+        return this.$store.state.users;
+      },
+   },
+       methods :{
+        ...mapActions(["fetchUsers"]),
+       },
+        mounted() {
+         this.fetchUsers();
         }
-    },
-    mounted()  {
-        axios.get(`https://dummyjson.com/users?limit=10`)
-        .then(res => {
-            this.users = res.data.users;
-            
-        })
-    },
-    beforeRouteEnter(to, from, next) {
-    next(vm => {
-      location.reload();
-    });
-  },
-
-  beforeRouteUpdate(to, from, next) {
-    location.reload();
-  },        
     
 }
 
