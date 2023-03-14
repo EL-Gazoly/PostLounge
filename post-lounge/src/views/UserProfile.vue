@@ -106,17 +106,41 @@ export default {
       jobTitle(){
         return this.$store.state.jobTitle
       },
+      isRightNavOpen() {
+        return this.$store.state.isRightNavOpen;
+      },
+      isLeftNavOpen() {
+        return this.$store.state.isLeftNavOpen;
+      }
 
     },
   
     methods: {
-      ...mapActions(["fetchPosts", "fetchUser"]),
+      ...mapActions(["fetchPosts", "fetchUser", "toggleRightNav", "toggleLeftNav"]),
+    toggleRightNav(){
+        this.$store.commit('toggleRightNav');
+      
+      },
+      toggleLeftNav(){
+        this.$store.commit('toggleLeftNav');
+      }
+    
     },
   
     mounted() {
       this.fetchPosts(Number(this.$route.params.id));
       this.fetchUser(this.$route.params.id);
     },
+    beforeRouteEnter(to, from, next) {
+    next(vm => {
+        // Reload the page by navigating to the current route
+        vm.$router.replace({
+        path: to.path,
+        query: to.query,
+        params: to.params
+        })
+    })  
+},
     watch: {
       $route(to, from) {
         location.reload();

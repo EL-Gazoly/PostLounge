@@ -22,7 +22,7 @@ export default createStore({
     },
     SET_POSTS(state, posts) {
       state.posts = posts
-      console.log('iam here', state.posts)
+      
     },
     SET_USER(state, user) {
       state.user = user
@@ -35,14 +35,7 @@ export default createStore({
     SET_LOADING(state, loading) {
       state.loading = loading
     },
-    UPDATE_REACTIONS(state, { postId, reactions }) {
-      state.posts = state.posts.map(post => {
-        if (post.id === postId) {
-          post.reactions = reactions
-        }
-        return post
-      })
-    },
+   
     SET_USER(state, user) {
       state.user = user
       state.companyName = user.company.name
@@ -68,7 +61,6 @@ export default createStore({
             })
           })
           if(userId){
-            console.log('userId', userId)
             posts = posts.filter(post => post.userId === userId)
             console.log('posts', posts)
           }
@@ -86,7 +78,6 @@ export default createStore({
         .get(`https://dummyjson.com/users?limit=10`)
         .then((res) => {
           const users = res.data.users || []
-          console.log('users', users)
           commit('SET_USERS', users)
 
         })
@@ -99,7 +90,6 @@ export default createStore({
       axios
         .get(`https://dummyjson.com/users/${userId}`)
         .then(res => {
-          
           commit('SET_USER', res.data)
         }
         )
@@ -108,6 +98,12 @@ export default createStore({
         }
         )
     },    
+    toggleRightNav({ commit }) {
+      commit('toggleRightNav')
+    },
+    toggleLeftNav({ commit }) {
+      commit('toggleLeftNav')
+    }
     
   },
   getters: {
@@ -126,9 +122,12 @@ export default createStore({
     return state.posts      
     },
     filteredPostsByUserId : state => userId => {
-      console.log(state.posts.filter(post => post.userId === userId))
+
        state.posts.filter(post => post.userId === userId)
        return getUserById()
     }
   },
+  isRightNavOpen(state) {
+    return state.isRightNavOpen
+  }
 })

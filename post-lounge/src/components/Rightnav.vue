@@ -41,7 +41,7 @@
 
 <script>
 import firendProfile from '@/components/firendProfile.vue'
-import { mapActions } from "vuex";
+import { mapActions, mapGetters } from "vuex";
 
 export default {
     name: 'Rightnav',
@@ -55,7 +55,9 @@ export default {
     }
     },
    computed: {
+    ...mapGetters(["isRightNavOpen"]),      
     users () {
+        
         return this.$store.state.users;
       },
    },

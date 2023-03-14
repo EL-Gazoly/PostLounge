@@ -34,7 +34,7 @@
   </template>
   
   <script>
-  import { mapGetters, mapActions } from "vuex";
+  import { mapGetters, mapActions , mapMutations} from "vuex";
   import postCard from "@/components/postCard.vue";
   import Leftnav from "@/components/Leftnav.vue";
   import Rightnav from "@/components/Rightnav.vue";
@@ -51,18 +51,30 @@
     },
   
     computed: {
-      ...mapGetters(["getUserById"]),
-     posts () {
+
+      isRightNavOpen() {
+        return this.$store.state.isRightNavOpen;
+      },
+      isLeftNavOpen() {
+        return this.$store.state.isLeftNavOpen;
+      },
+      posts () {
         return this.$store.getters.getUserById;
       },
       loading() {
         return this.$store.state.loading;
-
       },
     },
   
     methods: {
-      ...mapActions(["fetchPosts"]),
+      ...mapActions(["fetchPosts", "toggleRightNav", "toggleLeftNav"]),
+      toggleRightNav(){
+        this.$store.commit('toggleRightNav');
+      
+      },
+      toggleLeftNav(){
+        this.$store.commit('toggleLeftNav');
+      }
     },
   
     mounted() {
