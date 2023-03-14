@@ -111,6 +111,10 @@ export default {
 
         display: none;
     }
-   
+    .landing-page-left-card{
+        width: 238px;
+        margin-right: 36px;
+    
+    }
 }
 </style>

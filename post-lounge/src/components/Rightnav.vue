@@ -180,6 +180,12 @@ export default {
 
         display: none;
     }
+    .landing-page-right-card{
+       
+        width: 238px;
+        margin-left: 36px;
+
+    }
    
 }
 
