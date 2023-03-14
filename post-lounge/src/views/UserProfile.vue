@@ -82,12 +82,6 @@ export default {
     postCard,
     Header,
   },
-  data() {
-    return {
-      isLeftNavOpen: false,
-      isRightNavOpen: false,
-    }
-  },
   computed: {
       ...mapGetters(["getUserById"]),
      posts () {
@@ -327,7 +321,7 @@ export default {
         width: 138.95px;
         height: 53px;
         position: relative;
-        top: 12%;
+        top: 13%;
         left: 20%;
     }
     .userProfil-card-profile-image img{
@@ -358,7 +352,7 @@ export default {
         width: 138.95px;
         height: 53px;
         position: relative;
-        top: 11%;
+        top: 12%;
         left: 20%;
     }
     .userProfil-card-profile-image img{
@@ -422,8 +416,8 @@ export default {
     .userProfil-card-profile-image{
         width: 116.95px;
         height: 53px;
-        top: 7.5%;
-        left: 23%;
+        top: 8.5%;
+        left: 21%;
     }
     .userProfil-card-profile-image img{
         height: 110px;
@@ -454,8 +448,8 @@ export default {
     .userProfil-card-profile-image{
         width: 116.95px;
         height: 53px;
-        top: 7.5%;
-        left: 23%;
+        top: 8.5%;
+        left: 22%;
     }
     .userProfil-card-profile-image img{
         height: 110px;
@@ -484,14 +478,25 @@ export default {
         font-size: 6px;
     }
     .userProfil-card-profile-image{
-        width: 104.95px;
+        width: 86.95px;
         height: 52px;
-        top: 8%;
-        left: 20%;
+        top: 10%;
+        left: 26%;
 
     }
     .userProfil-card-profile-image img{
-        height: 110px;
+        height: 98px;
+    }
+
+}
+
+@media (max-height: 710px) and (min-height: 440px){
+    .userProfil-card-profile-image{
+        width: 86.95px;
+        height: 52px;
+        top: 6%;
+        left: 25%;
+
     }
 }
 </style>
