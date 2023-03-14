@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <router-view :key="$route.fullPath"/>
+    <router-view/>
   </div>
 </template>
 
@@ -27,18 +27,6 @@ export default {
   beforeRouteLeave(to, from, next) {
     location.reload();
   },
-//   watch: {
-//     $route(to, from, next) {
-
-//       if (to.path !== from.path) {
-//         location.reload();
-        
-//       }
-//     },
-//   },
-//   beforeRouteLeave(to, from, next) {
-//   next();
-// },
 };
 
 </script>

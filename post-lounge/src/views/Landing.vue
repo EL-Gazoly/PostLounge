@@ -83,22 +83,10 @@
     mounted() {
       this.fetchPosts();
     },
-    watch: {
-      $route(to, from) {
-        location.reload();
-      },
-    },
-    
-    beforeRouteUpdate(to, from, next) {
-    console.log(to.path)
-    console.log(from.path)
-    location.reload();
-    next();
-  },
-  beforeUnmount(){
-    this.resetProfile();
-    
-  }
+    beforeUnmount(){
+      this.resetProfile();
+      
+    }
    
   };
   
