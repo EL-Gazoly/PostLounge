@@ -61,12 +61,13 @@ export default {
         return this.$store.state.users;
       },
    },
-       methods :{
+    methods :{
         ...mapActions(["fetchUsers"]),
-       },
+    },
         mounted() {
-         this.fetchUsers();
-        }
+        this.fetchUsers();
+        },
+        
     
 }
 

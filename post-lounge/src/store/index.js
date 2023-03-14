@@ -42,6 +42,11 @@ export default createStore({
       state.jobTitle = user.company.title
       state.gender = user.gender === 'male' ? 'MR' : 'MRS'
     },
+    RESET_USER(state) {
+      state.user = []
+      state.posts = []
+      state.users= []
+    },
   },
   actions: {
     fetchPosts({ commit }, userId) {
@@ -103,7 +108,10 @@ export default createStore({
     },
     toggleLeftNav({ commit }) {
       commit('toggleLeftNav')
-    }
+    },
+    resetUser({ commit }) {
+      commit('RESET_USER')
+    },
     
   },
   getters: {

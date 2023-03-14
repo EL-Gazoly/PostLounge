@@ -124,21 +124,7 @@ export default {
       this.fetchPosts(Number(this.$route.params.id));
       this.fetchUser(this.$route.params.id);
     },
-    beforeRouteEnter(to, from, next) {
-    next(vm => {
-        // Reload the page by navigating to the current route
-        vm.$router.replace({
-        path: to.path,
-        query: to.query,
-        params: to.params
-        })
-    })  
-},
-    watch: {
-      $route(to, from) {
-        location.reload();
-      },
-    }
+    
 };
 </script>
 

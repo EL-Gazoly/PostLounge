@@ -34,7 +34,7 @@
   </template>
   
   <script>
-  import { mapGetters, mapActions , mapMutations} from "vuex";
+  import {mapActions } from "vuex";
   import postCard from "@/components/postCard.vue";
   import Leftnav from "@/components/Leftnav.vue";
   import Rightnav from "@/components/Rightnav.vue";
@@ -74,6 +74,9 @@
       },
       toggleLeftNav(){
         this.$store.commit('toggleLeftNav');
+      },
+      resetProfile() {
+        this.$store.dispatch('resetUser')
       }
     },
   
@@ -84,9 +87,21 @@
       $route(to, from) {
         location.reload();
       },
-    }
+    },
+    
+    beforeRouteUpdate(to, from, next) {
+    console.log(to.path)
+    console.log(from.path)
+    location.reload();
+    next();
+  },
+  beforeUnmount(){
+    this.resetProfile();
+    
+  }
    
   };
+  
   </script>
   
 
